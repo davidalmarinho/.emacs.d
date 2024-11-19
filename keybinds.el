@@ -1,16 +1,4 @@
-;; ~/.emacs.d/themes.el
-
-;; Ensure that use-package is loaded
-(require 'use-package)
-
-;; Install and load the Catppuccin theme
-(use-package catppuccin-theme
-  :ensure t
-  :init
-  ;; Start with the dark theme (mocha) by default
-  (setq catppuccin-flavor 'mocha)
-  :config
-  (load-theme 'catppuccin t))
+;; ~/.emacs.d/keybinds.el
 
 ;; Function to set the dark theme
 (defun set-dark-theme ()

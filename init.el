@@ -1,13 +1,5 @@
 ;; ~/.emacs.d/init.el
 
-(setq inhibit-startup-screen t) ;; Disable the startup screen
-(scroll-bar-mode -1) ;; Disable visible scroll bar
-(tool-bar-mode -1) ;; Disable the toolbar
-
-;; (menu-bar-mode -1)            ; Disable the menu bar
-
-(set-face-attribute 'default nil :font "Iosevka Nerd Font Mono" :height 140)
-
 ;; Initialize package sources
 (require 'package)
 
@@ -18,31 +10,35 @@
 (package-initialize)
 (unless package-archive-contents (package-refresh-contents))
 
+;; Initialize use-package on non-Linux platforms
+(unless (package-installed-p 'use-package)
+  (package-install 'use-package))
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-(use-package command-log-mode)
+(load-file "~/.emacs.d/ui.el")
+(load-file "~/.emacs.d/keybinds.el")
+;; Plugins
+(load-file "~/.emacs.d/which-key.el")  ; Describes keybinds mappings
+(load-file "~/.emacs.d/ivy.el")        ; Autocompletation frontend engine
+(load-file "~/.emacs.d/counsel.el")    ; Describes commands
+(load-file "~/.emacs.d/ivy-rich.el")   ; dont know yet very well
+(load-file "~/.emacs.d/helpful.el")    ; Shows better functions documentations
+(load-file "~/.emacs.d/evil-mode.el")  ; Vim emulation
+(load-file "~/.emacs.d/projectile.el") ; Project manager
+(load-file "~/.emacs.d/magit.el")      ; git user interface
 
-;; Load Evil configuration
-(load-file "~/.emacs.d/evil-config.el")
+;; TODO: Move to another file what is in here
+;; ---
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
-;; Enable absolute line numbers
-(global-display-line-numbers-mode 1)
+(use-package good-scroll
+  :init
+  (good-scroll-mode 1))
+(global-set-key [next] #'good-scroll-up-full-screen)
+(global-set-key [prior] #'good-scroll-down-full-screen)
 
-;; Install and configure ligature package
-(use-package ligature
-   :config
-   (ligature-set-ligatures
-    't
-    '("www" "~~" "||" "|||" "++" "**" "::" ":::" "!!" "!!1" "??" "??1" "->" "<-" "=>" "<=>" "===" "===" "===" "===" "->>" "<<<" "<=>" "<>" "<<" "!=" "==" ">=" "<="))
-   ;; Activate ligatures for programming modes
-   (global-ligature-mode t))
-
-;; Load LSP configuration
-(load-file "~/.emacs.d/lsp-config.el")
-
-;; Load theme configurations from themes.el
-(load-file "~/.emacs.d/themes.el")
+;; ---
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -50,13 +46,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(evil-leader evil ligature command-log-mode catppuccin-theme)))
+   '(catppuccin-theme counsel counsel-projectile doom-modeline evil
+		      evil-collection evil-magit general good-scroll
+		      helpful ivy-rich magit projectile)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(company-preview ((t (:background nil :foreground "#51afef"))))
- '(company-preview-common ((t (:foreground "#88c0d0"))))
- '(company-tooltip ((t (:background "#282c34" :foreground "#ffffff"))))
- '(company-tooltip-selection ((t (:background "#5e81ac" :foreground "#ffffff")))))
+ )
