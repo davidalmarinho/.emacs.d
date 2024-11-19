@@ -97,31 +97,35 @@
 ;; Install and configure company-mode
 (use-package company
   :ensure t
-  :hook
-  (after-init . global-company-mode)  ;; Enable globally
+  :hook (after-init . global-company-mode)
   :config
-  (setq company-idle-delay 0.2)        ;; Delay before suggestions appear
-  (setq company-minimum-prefix-length 1) ; Minimum prefix length to trigger completion
-  (setq company-show-numbers t)        ;; Show numbers next to suggestions
+  (setq company-idle-delay 0.2)
+  (setq company-minimum-prefix-length 1)
+  (setq company-show-numbers t)
+  (setq company-tooltip-limit 10) ;; Show up to 10 candidates in the tooltip
 
-  ;; Set up company backends (you can add or modify these as needed)
-  (setq company-backends '((company-files
-                             company-capf
-                             company-dabbrev))))
-
+  ;; Add yasnippet support to company backends
+  (setq company-backends '((company-files           ;; Files & directories
+                            company-capf            ;; LSP completions
+                            company-yasnippet       ;; Snippet completions
+                            company-dabbrev-code    ;; Code-based completions
+                            company-dabbrev))))
 ;; Install all-the-icons
 (use-package all-the-icons
   :ensure t)
 
-;; Install and configure company-box for better completion UI
+;; Company-box for improved UI
 (use-package company-box
   :ensure t
-  :hook (company-mode . company-box-mode)  ;; Enable company-box when company-mode is active
+  :hook (company-mode . company-box-mode)
   :config
-  (setq company-box-icons-alist 'company-box-icons-all-the-icons)  ;; Use all-the-icons for icons
-  (setq company-box-max-candidates 50)  ;; Set max candidates displayed in the box
+  (setq company-box-icons-alist 'company-box-icons-all-the-icons)
+  (setq company-box-max-candidates 30)  ;; Show up to 30 candidates
+  (setq company-box-show-single-candidate t)
+  (setq company-box-doc-enable t)       ;; Show documentation tooltip
 )
 
-;; Optionally, you can set up tooltip settings for hover information
-(setq lsp-hover-enable t) ;; Enable hover information in LSP
-(setq lsp-hover-show-frame t) ;; Show hover information in a frame
+;; LSP hover tooltips
+(setq lsp-hover-enable t)
+(setq lsp-hover-show-frame t)
+(setq lsp-hover-delay 0.05)

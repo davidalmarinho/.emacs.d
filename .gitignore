@@ -1,2 +1,4 @@
 auto-save-list
 elpa
+.dap-breakpoints
+.lsp-session-*
