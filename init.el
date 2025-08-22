@@ -27,6 +27,7 @@
 (load-file "~/.emacs.d/evil-mode.el")  ; Vim emulation
 (load-file "~/.emacs.d/projectile.el") ; Project manager
 (load-file "~/.emacs.d/magit.el")      ; git user interface
+(load-file "~/.emacs.d/org-mode.el")   ; Framework to organize your life
 
 ;; TODO: Move to another file what is in here
 ;; ---
@@ -45,10 +46,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   '(catppuccin-theme counsel counsel-projectile doom-modeline evil
-		      evil-collection evil-magit general good-scroll
-		      helpful ivy-rich magit projectile)))
+ '(package-selected-packages nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
