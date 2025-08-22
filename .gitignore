@@ -1,4 +1,10 @@
-auto-save-list
-elpa
-.dap-breakpoints
-.lsp-session-*
+# Ignore everything
+*
+
+# But keep .el and .md files
+!*.el
+!*.md
+
+# Also keep the .gitignore file itself
+!.gitignore
+
