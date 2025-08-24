@@ -1,4 +1,4 @@
-;; ~/.emacs.d/evil-mode.el
+;; ~/.emacs.d/src/evil-mode.el
 
 (defun rune/evil-hook ()
   (dolist (mode '(custom-mode

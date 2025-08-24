@@ -1,4 +1,4 @@
-;; ~/.emacs.d/keybinds.el
+;; ~/.emacs.d/src/keybinds.el
 
 ;; Function to set the dark theme
 (defun set-dark-theme ()

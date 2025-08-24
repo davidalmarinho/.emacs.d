@@ -1,4 +1,4 @@
-;; ~/.emacs.d/projectile.el
+;; ~/.emacs.d/src/projectile.el
 
 (use-package projectile
   :diminish projectile-mode

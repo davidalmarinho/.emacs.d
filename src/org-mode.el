@@ -1,4 +1,4 @@
-;; ~/.emacs.d/org-mode.el
+;; ~/.emacs.d/src/org-mode.el
 
 (defun efs/org-mode-setup ()
   (org-indent-mode)
@@ -34,8 +34,13 @@
 (use-package org
   :hook (org-mode . efs/org-mode-setup)
   :config
+  ;; Org files customization.
   (setq org-ellipsis " ▾ ")
-  (efs/org-font-setup))
+  (efs/org-font-setup)
+  ;; Org agenda customization
+  (setq org-agenda-start-with-log-mode t)
+  (setq org-log-done 'time)
+  (setq org-log-into-drawer t))
 
 (use-package org-bullets
   :after org

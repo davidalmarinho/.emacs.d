@@ -1,4 +1,4 @@
-;; ~/.emacs.d/ivy.el
+;; ~/.emacs.d/src/ivy.el
 
 (use-package ivy
   :diminish

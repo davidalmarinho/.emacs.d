@@ -1,4 +1,4 @@
-;; ~/.emacs.d/counsel.el
+;; ~/.emacs.d/src/counsel.el
 
 (use-package counsel
   :bind (("M-x" . counsel-M-x)

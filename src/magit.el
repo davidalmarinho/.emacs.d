@@ -1,4 +1,4 @@
-;; ~/.emacs.d/magit.el
+;; ~/.emacs.d/src/magit.el
 
 (use-package magit
   :custom

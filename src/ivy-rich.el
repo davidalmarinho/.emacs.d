@@ -1,4 +1,4 @@
-;; ~/.emacs.d/ivy-rich.el
+;; ~/.emacs.d/src/ivy-rich.el
 
 (use-package ivy-rich
   :init

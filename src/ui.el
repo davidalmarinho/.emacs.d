@@ -1,4 +1,4 @@
-;; ~/.emacs.d/ui.el
+;; ~/.emacs.d/src/ui.el
 
 (setq inhibit-startup-message t) ; Hides startup message
 

@@ -1,4 +1,4 @@
-;; ~/.emacs.d/which-key.el
+;; ~/.emacs.d/src/which-key.el
 
 (use-package which-key
   :init (which-key-mode)

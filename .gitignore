@@ -4,6 +4,7 @@
 # But keep .el and .md files
 !*.el
 !*.md
+!*src
 
 # Also keep the .gitignore file itself
 !.gitignore

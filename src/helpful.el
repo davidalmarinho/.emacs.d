@@ -1,4 +1,4 @@
-;; ~/.emacs.d/helpful.el
+;; ~/.emacs.d/src/helpful.el
 
 (use-package helpful
   :after shortdoc

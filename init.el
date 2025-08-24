@@ -16,18 +16,18 @@
 (require 'use-package)
 (setq use-package-always-ensure t)
 
-(load-file "~/.emacs.d/ui.el")
-(load-file "~/.emacs.d/keybinds.el")
+(load-file "~/.emacs.d/src/ui.el")
+(load-file "~/.emacs.d/src/keybinds.el")
 ;; Plugins
-(load-file "~/.emacs.d/which-key.el")  ; Describes keybinds mappings
-(load-file "~/.emacs.d/ivy.el")        ; Autocompletation frontend engine
-(load-file "~/.emacs.d/counsel.el")    ; Describes commands
-(load-file "~/.emacs.d/ivy-rich.el")   ; dont know yet very well
-(load-file "~/.emacs.d/helpful.el")    ; Shows better functions documentations
-(load-file "~/.emacs.d/evil-mode.el")  ; Vim emulation
-(load-file "~/.emacs.d/projectile.el") ; Project manager
-(load-file "~/.emacs.d/magit.el")      ; git user interface
-(load-file "~/.emacs.d/org-mode.el")   ; Framework to organize your life
+(load-file "~/.emacs.d/src/which-key.el")  ; Describes keybinds mappings
+(load-file "~/.emacs.d/src/ivy.el")        ; Autocompletation frontend engine
+(load-file "~/.emacs.d/src/counsel.el")    ; Describes commands
+(load-file "~/.emacs.d/src/ivy-rich.el")   ; dont know yet very well
+(load-file "~/.emacs.d/src/helpful.el")    ; Shows better functions documentations
+(load-file "~/.emacs.d/src/evil-mode.el")  ; Vim emulation
+(load-file "~/.emacs.d/src/projectile.el") ; Project manager
+(load-file "~/.emacs.d/src/magit.el")      ; git user interface
+(load-file "~/.emacs.d/src/org-mode.el")   ; Framework to organize your life
 
 ;; TODO: Move to another file what is in here
 ;; ---
