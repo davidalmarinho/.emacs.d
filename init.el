@@ -28,6 +28,10 @@
 (load-file "~/.emacs.d/src/projectile.el") ; Project manager
 (load-file "~/.emacs.d/src/magit.el")      ; git user interface
 (load-file "~/.emacs.d/src/org-mode.el")   ; Framework to organize your life
+(load-file "~/.emacs.d/src/lsp/init-lsp.el")
+(load-file "~/.emacs.d/src/lsp/rust.el")
+(load-file "~/.emacs.d/src/lsp/c_cpp.el")
+(load-file "~/.emacs.d/src/lsp/python.el")
 
 ;; TODO: Move to another file what is in here
 ;; ---
@@ -46,7 +50,11 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages nil))
+ '(package-selected-packages
+   '(catppuccin-theme company-box counsel-projectile doom-modeline
+		      evil-collection good-scroll helpful ivy-rich
+		      lsp-pyright lsp-treemacs lsp-ui magit
+		      org-bullets pyvenv rust-mode visual-fill-column)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

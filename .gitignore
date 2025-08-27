@@ -5,7 +5,7 @@
 !*.el
 !*.md
 !*src
+!*src/lsp
 
 # Also keep the .gitignore file itself
 !.gitignore
-

@@ -39,7 +39,9 @@
 
 (dolist (mode '(org-mode-hook
                 term-mode-hook
-                eshell-mode-hook))
+                eshell-mode-hook
+		shell-mode-hook
+		treemacs-mode-hook))
   (add-hook mode #'do-not-display-line-numbers-mode-hook))
 
 ;; Cursor customization
