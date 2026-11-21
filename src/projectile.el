@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;; ~/.emacs.d/src/projectile.el
 
 (use-package projectile

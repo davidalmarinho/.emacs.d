@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;; ~/.emacs.d/src/ivy-rich.el
 
 (use-package ivy-rich

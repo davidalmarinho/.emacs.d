@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;; ~/.emacs.d/src/lsp/python.el
 
 ;; Requires 'npm install -g pyright'

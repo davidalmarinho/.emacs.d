@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;; ~/.emacs.d/src/keybinds.el
 
 ;; Function to set the dark theme

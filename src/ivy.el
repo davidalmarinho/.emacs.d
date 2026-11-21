@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;; ~/.emacs.d/src/ivy.el
 
 (use-package ivy

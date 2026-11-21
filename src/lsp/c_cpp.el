@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;; ~/.emacs.d/src/lsp/c_cpp.el
 
 (use-package cc-mode

@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;; ~/.emacs.d/src/evil-mode.el
 
 (defun rune/evil-hook ()

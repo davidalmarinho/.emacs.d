@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;; ~/.emacs.d/src/ui.el
 
 (setq inhibit-startup-message t) ; Hides startup message

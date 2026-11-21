@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;; ~/.emacs.d/src/lsp/init-lsp.el
 
 ;; Show the filepath in the top of the window

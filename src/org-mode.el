@@ -1,3 +1,4 @@
+;;; -*- lexical-binding: t; -*-
 ;; ~/.emacs.d/src/org-mode.el
 
 (defun efs/org-mode-setup ()
